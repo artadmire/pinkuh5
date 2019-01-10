@@ -1,0 +1,81 @@
+h2 {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #212121;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f4f4f4;
+  /*no*/
+  .arrow_left {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    left: 20px;
+    background: url('~@/assets/order_navbar_arrow_back_icon@3x.png');
+    background-size: 100%;
+  }
+}
+
+.addrList_ul {
+  max-width: 414px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px 48px;
+  font-size: 14px;
+  color: $fontColor;
+  li {
+    height: 109px;
+    border-bottom: 1px solid #f4f4f4;
+    /*no*/
+    p:nth-child(1) {
+      height: 54px;
+      line-height: 54px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        padding-right: 20px;
+      }
+      em {
+        width: 40px;
+        text-align: center;
+        font-size: 12px;
+        border: 1px solid $pink;
+        /*no*/
+        height: 20px;
+        line-height: 20px;
+        color: $pink;
+        border-radius: 3px;
+        transform: scale(0.8);
+      }
+      b {}
+    }
+    p:nth-child(2) {
+      line-height: 20px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+  }
+}
+
+#increase_new_addr {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  height: 48px;
+  line-height: 48px;
+  background: $fontColor;
+  transform: translate3d(0, 0, 0);
+}

@@ -1,0 +1,140 @@
+.newAddr {
+  background: white;
+  h2 {
+    height: 44px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: PingFangSC-Regular;
+    border-bottom: 1px solid #f4f4f4;
+    /*no*/
+    font-size: 18px;
+    i {
+      width: 24px;
+      height: 24px;
+      background: url('~@/assets/order_navbar_arrow_back_icon@3x.png');
+      background-size: 100%;
+      margin-right: 10px;
+    }
+    span {
+      flex: 1;
+      text-align: center;
+      color: #212121;
+    }
+    em {
+      color: $fontColor;
+    }
+  }
+  .newAddr_baseInfo {
+    max-width: 414px;
+    margin: 0 auto;
+    width: 100%;
+    h3 {
+      padding: 0 20px;
+      height: 44px;
+      line-height: 44px;
+      font-family: PingFangSC-Medium;
+      font-size: 20px;
+      color: $fontColor;
+      border-bottom: 1px solid #f4f4f4;
+      /*no*/
+    }
+    p {
+      height: 54px;
+      width: 335px;
+      margin: 0 auto;
+      line-height: 54px;
+      font-size: 14px;
+      border-bottom: 1px solid #f4f4f4;
+      /*no*/
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      input {
+        width: 200px;
+        text-align: right;
+        font-size:14px;
+      }
+      em {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: url('~@/assets/order_select_down_icon_24@3x.png');
+        background-size: 100%;
+      }
+      input::-webkit-input-placeholder {
+        text-align: right;
+        color: $lightGray;
+        font-size: 12px;
+      }
+      :-ms-input-placeholder {
+        text-align: right;
+        color: $lightGray;
+        font-size: 12px;
+      }
+      :-moz-placeholder {
+        text-align: right;
+        color: $lightGray;
+        font-size: 12px;
+      }
+      ::-moz-placeholder {
+        text-align: right;
+        color: $lightGray;
+        font-size: 12px;
+      }
+    }
+    .setDefaultAddr {
+      height: 44px;
+      line-height: 44px;
+      display: flex;
+      padding: 0 20px;
+      align-items: center;
+      em {
+        width: 16px;
+        height: 16px;
+        background: url('~@/assets/payment_uncheck_common_icon@3x.png');
+        background-size: 100%;
+        margin-right: 10px;
+      }
+      em.active {
+        background: url('~@/assets/payment_check_common_icon@3x.png');
+        background-size: 100%;
+      }
+    }
+  }
+  .addChoose_mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, 0, 0);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    .addChoose_mask_top {
+      flex: 1;
+    }
+    #mask {
+      height: 180px;
+      width: 100%;
+      background: white;
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active in below version 2.1.8 */
+
+  {
+  opacity: 0
+}

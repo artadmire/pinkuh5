@@ -1,0 +1,341 @@
+.cart {
+  font-family: PingFangSC-Regular; // background: $backgroundColor;
+  height: 100%;
+  h2 {
+    width: 100%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 18px;
+    color: #212121;
+    box-sizing: border-box;
+    border: 1px solid #f4f4f4;
+    /*no*/
+    background: white;
+  }
+  .cartList {
+    max-width: 414px;
+    margin: 0 auto;
+    padding-bottom: 96px; // margin-bottom: 96px;
+    // background: $backgroundColor;
+    .normal,
+    .abNormal {
+      background: white;
+      dt {
+        width: 355px;
+        margin-left: 20px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f4f4f4;
+        /*no*/
+        >div {
+          display: flex;
+          align-items: center;
+          span {
+            font-size: 16px;
+            color: $fontColor;
+            line-height: 43px;
+          }
+          em {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url('~@/assets/payment_uncheck_common_icon@3x.png');
+            background-size: 100%;
+            margin: 0 10px 0 -9px;
+          }
+          em.active {
+            background: url('~@/assets/payment_check_common_icon@3x.png');
+            background-size: 100%;
+          }
+        }
+        >a {
+          width: 100%;
+          font-size: 12px;
+          line-height: 12px;
+          padding-bottom: 9px;
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+          padding-right: 10px;
+          color: $fontColor;
+          span {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          b {
+            color: #f6b65c;
+          }
+          em {
+            display: inline-block;
+            border-radius: 3px;
+            padding: 3px;
+            transform: scale(0.9);
+            border: 1px solid $gray;
+            /*no*/
+          }
+          em.cart_discount_active {
+            color: $pink;
+            border: 1px solid $pink;
+            /*no*/
+          }
+          em.cart_discount_price_active {
+            color: #f6b65c;
+            border: 1px solid #f6b65c;
+            /*no*/
+          }
+          i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url('~@/assets/arrow_right_16_icon.png');
+            background-size: 100%;
+          }
+        }
+      }
+      dd {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 17px 10px 17px 20px;
+        display: flex;
+        a>img {
+          width: 78px;
+          height: 78px;
+          margin-right: 5px;
+        }
+        .cartList_goods_center {
+          width: 175px;
+          p:nth-child(1) {
+            font-size: 14px;
+            line-height: 18px;
+            color: $fontColor;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            margin-bottom: 3px;
+          }
+          p:nth-child(2) {
+            font-size: 12px;
+            color: $lightGray;
+            line-height: 20px;
+            em {
+              padding-right: 10px;
+            }
+          }
+          p:nth-child(3) {
+            font-size: 12px;
+            line-height: 25px;
+            span {
+              color: $lightGray;
+              text-decoration: line-through;
+            }
+            em {
+              color: $pink;
+            }
+          }
+        }
+        .cartList_goods_right {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          span {
+            width: 16px;
+            height: 16px;
+            background: url('~@/assets/detail_order_delete_icon@3x.png');
+            background-size: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          i {
+            position: absolute;
+            right: -5px;
+            color: #F6B65C;
+            width: 100%;
+            transform: scale(0.9);
+            bottom: 25px;
+            text-align: center;
+          }
+          p {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            em {
+              display: inline-block;
+              width: 22px;
+              height: 22px;
+              border: 1px solid #dedede;
+              /*no*/
+              text-align: center;
+              line-height: 18px;
+              font-size: 18px;
+              box-sizing: border-box;
+            }
+            em.cartList_goods_reduce {
+              border-radius: 10px 0 0 10px;
+            }
+            em.cartList_goods_increase {
+              border-radius: 0px 10px 10px 0px;
+            }
+            b {
+              display: inline-block;
+              width: 34px;
+              height: 22px;
+              line-height: 20px;
+              text-align: center;
+              border-top: 1px solid #dedede;
+              /*no*/
+              border-bottom: 1px solid #dedede;
+              /*no*/
+              box-sizing: border-box;
+            }
+          }
+        }
+      }
+      dd.discount_active {
+        background: #fff4f6;
+      }
+    }
+    .abNormal dt {
+      display: flex;
+      height: 55px;
+      background: $backgroundColor;
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      >span {
+        font-size: 12px;
+        color: $gray;
+        width: 96px;
+        height: 25px;
+        border: 1px solid $gray;
+        /*no*/
+        text-align: center;
+        line-height: 25px;
+        border-radius: 25px;
+      }
+    }
+  }
+  .cartListNone {
+    max-width: 414px;
+    margin: 0 auto;
+    background: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    align-items: center;
+    height: 500px;
+    font-size: 12px;
+    color: $lightGray;
+    img {
+      width: 110px;
+      height: 110px;
+      margin-bottom: 10px;
+    }
+  }
+  .settlement {
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f4f4f4;
+    /*no*/
+    background: white;
+    border-bottom: 1px solid #f4f4f4;
+    /*no*/
+    transform: translate3d(0, 0, 0);
+    div:nth-child(1) {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      em {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url('~@/assets/payment_uncheck_common_icon@3x.png');
+        background-size: 100%;
+        margin: 0 10px 0 -9px;
+      }
+      em.active {
+        background: url('~@/assets/payment_check_common_icon@3x.png');
+        background-size: 100%;
+      }
+      line-height: 48px;
+    }
+    div:nth-child(2) {
+      padding: 4px 0;
+      line-height: 20px;
+      flex: 1;
+      text-align: right;
+      padding-right: 10px;
+      p:nth-child(2) {
+        color: $gray;
+        transform: scale(0.9);
+        margin-right: -8px;
+      }
+    }
+    div:nth-child(3) {
+      width: 120px;
+      text-align: center;
+      line-height: 48px;
+      background: $pink;
+      color: white;
+      font-size: 18px;
+    }
+    div:nth-child(3).invide {
+      background: $gray;
+    }
+  }
+}
+
+
+
+.mint-msgbox {
+  .mint-msgbox-header {
+    .mint-msgbox-title {
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+  .mint-msgbox-content {
+    padding: 10px;
+    border-bottom: 0;
+    .mint-msgbox-message {
+      color: $fontColor;
+      font-size: 14px;
+    }
+  }
+  .mint-msgbox-btns {
+    padding: 0 30px 10px;
+    justify-content: space-between;
+    .mint-msgbox-btn {
+      border: 1px solid #ccc;
+      /*no*/
+      border-radius: 30px;
+      width: 119px;
+      flex: none;
+      height: 31px;
+      line-height: 31px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .mint-msgbox-cancel {
+      color: $gray;
+    }
+    .mint-msgbox-confirm {
+      background: $pink;
+      color: white;
+      border: 0;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+h2 {
+  height: 44px;
+  line-height: 44px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  align-items: center;
+  font-size: 18px;
+  color: #212121;
+  font-family: PingFangSC-Regular;
+  border-bottom: 1px solid #f4f4f4;
+  /*no*/
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  i {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    background: url('../assets/order_navbar_arrow_back_icon@3x.png');
+    background-size: 100%;
+    margin-right: 10px;
+  }
+}
+
+.active {
+  max-width: 414px;
+  margin: 0 auto;
+  .yearGoodsBox {
+    padding: 0px 0 48px;
+  }
+}

@@ -1,0 +1,121 @@
+.invoice {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  h2 {
+    height: 44px;
+    flex: none;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: PingFangSC-Regular;
+    border-bottom: 1px solid #f4f4f4;
+    /*no*/
+    font-size: 18px;
+    i {
+      width: 24px;
+      height: 24px;
+      background: url('~@/assets/order_navbar_arrow_back_icon@3x.png');
+      background-size: 100%;
+      margin-right: 10px;
+    }
+    span {
+      flex: 1;
+      text-align: center;
+      color: #212121;
+    }
+    em {
+      width: 24px;
+      height: 24px;
+      color: $fontColor;
+    }
+  }
+  .invoice_box{
+    flex:1;
+    min-height: 400px;
+  }
+  .invoice_content {
+    max-width: 414px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 14px;
+    color: $fontColor;
+    border-bottom: 10px solid $backgroundColor;
+    p:nth-child(1) {
+      display: flex;
+      justify-content: space-between;
+      height: 44px;
+      line-height: 44px;
+      border-bottom: 1px solid #f4f4f4;
+      /*no*/
+      i {
+        display: flex;
+        align-items: center;
+        em {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+          margin-top: -2px;
+          background: url('~@/assets/payment_uncheck_common_icon@3x.png');
+          background-size: 100%;
+        }
+        em.active {
+          background: url('~@/assets/payment_check_common_icon@3x.png');
+          background-size: 100%;
+        }
+      }
+    }
+  }
+  .invoice_choose {
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    i {
+      display: flex;
+      align-items: center;
+      em {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        margin-top: -2px;
+        background: url('~@/assets/order_setting_radio_off_common_icon@3x.png');
+        background-size: 100%;
+      }
+      em.active {
+        background: url('~@/assets/order_setting_radio_on_common_icon@3x.png');
+        background-size: 100%;
+      }
+    }
+  }
+  .invoice_choose_result {
+    max-width: 414px;
+    margin: 0 auto;
+    p {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 44px;
+      line-height: 44px;
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box;
+      input {
+        text-align: right;
+        padding: 5px 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

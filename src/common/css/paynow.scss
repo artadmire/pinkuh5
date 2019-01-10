@@ -1,0 +1,243 @@
+.paynow {
+  h2 {
+    height: 44px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #212121;
+    font-family: PingFangSC-Regular;
+    border-bottom: 1px solid #f4f4f4;
+    /*no*/
+    justify-content: center;
+    position: relative;
+    i {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      width: 24px;
+      height: 24px;
+      background: url('~@/assets/order_navbar_arrow_back_icon@3x.png');
+      background-size: 100%;
+      margin-right: 10px;
+    }
+  }
+  .paynow_top {
+    max-width: 414px;
+    margin: 0 auto;
+    width: 100%;
+    height: 142px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-bottom: 10px solid $backgroundColor;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    p {
+      flex: 1;
+      font-family: PingFangSC-Thin;
+      padding-left: 20px;
+      font-size: 12px;
+      color: $fontColor;
+      line-height: 20px;
+      em {
+        font-family: $fontFamily;
+        font-size: 13px;
+        color: black;
+      }
+    }
+  }
+  .payment_info {
+    max-width: 414px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    text-align: right;
+    em {
+      font-size: 12px;
+      color: #FF3C3A;
+      line-height: 18px;
+    }
+    //
+    // p:nth-child(1) {
+    //   height: 44px;
+    //   line-height: 44px;
+    //   font-family: PingFangSC-Medium;
+    //   font-size: 20px;
+    //   color: $fontColor;
+    // }
+    // p:nth-child(2) {
+    //   display: flex;
+    //   font-size: 14px;
+    //   height: 54px;
+    //   line-height: 54px;
+    //   justify-content: space-between;
+    //   border-bottom: 1px solid #f4f4f4;
+    //   /*no*/
+    // }
+    p {
+      font-family: PingFangSC-Thin;
+      margin:17px 0 5px 0;
+      text-align: right;
+      font-size: 20px;
+      color: $fontColor;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  .payment_mode {
+    max-width: 414px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px 0px;
+    box-sizing: border-box;
+    border-bottom: 10px solid $backgroundColor;
+    h3 {
+      height: 44px;
+      line-height: 44px;
+      font-family: PingFangSC-Medium;
+      font-size: 20px;
+      color: $fontColor;
+    }
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+        border-bottom: 1px solid #f4f4f4;
+        /*no*/
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        span {
+          flex: 1;
+          padding: 0 10px;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.87);
+        }
+        em {
+          width: 18px;
+          height: 18px;
+          background: url('~@/assets/payment_radio_unselected_common_icon.png');
+          background-size: 100%;
+        }
+        em.active {
+          background: url('~@/assets/payment_radio_common_icon@3x.png');
+          background-size: 100%;
+        }
+      }
+    }
+  }
+  #paynow_btn {
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+    display: flex;
+    span {
+      display: block;
+      background: $pink;
+      text-align: center;
+      line-height: 48px;
+      width: 187px;
+      color: white;
+      font-family: PingFangSC-Regular;
+      transform: translate3d(0, 0, 0);
+    }
+    em {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color:#FF3C3A;
+      width: 188px;
+      line-height: 48px;
+      font-size: 14px;
+      text-indent: 13px;
+      i{
+        color:#141414
+      }
+    }
+    .unactive {
+      background: #FFADAD;
+    }
+  }
+}
+
+.mask {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate3d(0, 0, 0);
+  .stagesMask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    font-size: 16px;
+    color: $gray;
+    font-family: PingFangSC-Regular;
+    h3 {
+      height: 44px;
+      line-height: 44px;
+      padding: 0 20px;
+    }
+    ul {
+      padding: 0 20px 25px;
+      li {
+        height: 54px;
+        border-bottom: 1px solid #f4f4f4;
+        /*no*/
+        box-sizing: border-box;
+        padding: 11px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div {
+          p:nth-child(1) {
+            font-size: 14px;
+            padding-bottom: 10px;
+            color: $fontColor;
+          }
+          p:nth-child(2) {
+            font-size: 12px;
+          }
+        }
+        em {
+          width: 18px;
+          height: 18px;
+          background: url('~@/assets/payment_uncheck_common_icon@3x.png');
+          background-size: 100%;
+        }
+        em.active {
+          background: url('~@/assets/payment_check_common_icon@3x.png');
+          background-size: 100%;
+        }
+      }
+    }
+    #stages_sure {
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      background: $pink;
+      color: white;
+      font-size: 18px;
+    }
+  }
+}
